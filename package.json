@@ -1,0 +1,38 @@
+{
+    "name": "connection-generator",
+    "version": "1.0.0",
+    "description": "Gerador de arquivo .env criptografado para conexão com Oracle",
+    "private": false,
+    "main": "main.js",
+    "scripts": {
+        "start": "set NODE_ENV=development&& electron .",
+        "build": "set NODE_ENV=production&& electron-packager . --out=./build/ --prune --overwrite --platform=win32 --arch=x64 --icon=./app/assets/img/icon/icon.ico --ignore=./gitignore --executableName=\"Gerador de Conexão\" --version-string.ProductName=\"connection-generator\"",
+        "lint": "./node_modules/.bin/eslint **/*.js",
+        "lint-fix": "./node_modules/.bin/eslint **/*.js --fix",
+        "rebuild": "./node_modules/.bin/electron-rebuild"
+    },
+    "author": "Victor Gianvechio <victor.gianvecchio@live.com>",
+    "copyright": "© 2019, Victor Gianvechio",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/victorgianvechio/connection-generator.git"
+    },
+    "dependencies": {
+        "electron-progressbar": "^1.2.0",
+        "jquery": "^3.4.1",
+        "oracledb": "github:oracle/node-oracledb#v3.1.2"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "electron": "^5.0.1",
+        "electron-packager": "^13.1.1",
+        "electron-rebuild": "^1.8.5",
+        "eslint": "^5.16.0"
+    },
+    "engineStrict": true,
+    "engines": {
+        "node": ">=10.15.3",
+        "npm": ">=6.4.1"
+    }
+}

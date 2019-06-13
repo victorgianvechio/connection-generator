@@ -1,0 +1,40 @@
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.container {
+    /* width: 280px; */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.left-side {
+    float: left;
+    margin-bottom: 10px;
+    width: 49%;
+}
+
+.right-side {
+    float: right;
+    margin-bottom: 10px;
+    width: 49%;
+}
+
+.left-side-btn {
+    float: left;
+    margin-bottom: 10px;
+    width: 12%;
+}
+
+.right-side-btn {
+    float: right;
+    margin-bottom: 10px;
+    width: 87%;
+}

@@ -1,0 +1,155 @@
+<div class="pane-group">
+    <div class="pane">
+        <h2>Gerador de Conexão</h2>
+
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <div class="container left-side">
+                        <label for="user">Usuário</label>
+                        <input
+                            type="text"
+                            name="user"
+                            id="user"
+                            class="form-control"
+                            placeholder="user"
+                        />
+                    </div>
+
+                    <div class="container right-side">
+                        <label for="pass">Senha</label>
+                        <input
+                            type="password"
+                            name="pass"
+                            id="pass"
+                            class="form-control"
+                            placeholder="********"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="conn">String de Conexão</label>
+                    <input
+                        type="text"
+                        name="conn"
+                        id="conn"
+                        class="form-control"
+                        placeholder="server:port/database"
+                    />
+                </div>
+
+                <hr />
+
+                <div class="form-group">
+                    <label for="cryptoAlgorithm">Algoritimo</label>
+                    <select id="cryptoAlgorithm" class="form-control"></select>
+                </div>
+
+                <div class="form-group">
+                    <div class="container left-side-btn">
+                        <button
+                            type="button"
+                            id="btnEncryption"
+                            class="btn btn-large btn-default"
+                        >
+                            <span class="icon icon-arrows-ccw"></span>
+                        </button>
+                    </div>
+
+                    <div class="container right-side-btn">
+                        <input
+                            type="text"
+                            name="key"
+                            id="key"
+                            class="form-control"
+                            placeholder="Encryption Key (32 bits)"
+                            readonly
+                        />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="container left-side-btn">
+                        <button
+                            type="button"
+                            id="btnFolder"
+                            class="btn btn-large btn-default"
+                        >
+                            <span class="icon icon-folder"></span>
+                        </button>
+                    </div>
+
+                    <div class="container right-side-btn">
+                        <input
+                            type="text"
+                            name="filePath"
+                            id="filePath"
+                            class="form-control"
+                            value=""
+                            placeholder="C:/"
+                            readonly
+                        />
+                        <input
+                            id="fileLocation"
+                            type="file"
+                            multiple
+                            webkitdirectory
+                            style="display: none"
+                        />
+                    </div>
+                </div>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <hr />
+
+                <div class="form-group">
+                    <label for="fileName">Nome do Arquivo</label>
+                    <input
+                        type="text"
+                        name="fileName"
+                        id="fileName"
+                        class="form-control"
+                        value=".env"
+                    />
+                </div>
+
+                <div class="container btn-container">
+                    <div class="form-actions">
+                        <button
+                            type="button"
+                            id="btnConfig"
+                            class="btn btn-large btn-default"
+                        >
+                            <span class="icon icon-cog"></span>
+                        </button>
+                        <button
+                            type="button"
+                            id="btnSair"
+                            class="btn btn-large btn-negative"
+                        >
+                            Sair
+                        </button>
+                        <button
+                            type="button"
+                            id="btnTestar"
+                            class="btn btn-large btn-primary"
+                        >
+                            Testar
+                        </button>
+                        <button
+                            type="button"
+                            id="btnGerar"
+                            class="btn btn-large btn-positive"
+                        >
+                            Gerar Arquivo
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
