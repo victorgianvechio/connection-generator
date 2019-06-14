@@ -35,15 +35,13 @@ function createWindow() {
         mainWindow.show()
     })
 
-    mainWindow.on('closed', function() {
+    mainWindow.on('closed', () => {
         mainWindow = null
     })
 }
 
 function showProgressbar(texto) {
-    if (progressBar) {
-        return
-    }
+    if (progressBar) return
 
     progressBar = new ProgressBar({
         title: 'Gerador de Conexão',
@@ -67,16 +65,14 @@ function showProgressbar(texto) {
         }
     })
 
-    progressBar.on('completed', function() {
+    progressBar.on('completed', () => {
         //progressBar.detail = 'Task completed. Exiting...'
         progressBar = null
     })
 }
 
 function setProgressbarCompleted() {
-    if (progressBar) {
-        progressBar.setCompleted()
-    }
+    if (progressBar) progressBar.setCompleted()
 }
 
 ipcMain.on('show-progressbar', (event, texto) => {
@@ -92,14 +88,10 @@ app.on('ready', () => {
     })
 })
 
-app.on('window-all-closed', function() {
-    if (process.platform !== 'darwin') {
-        app.quit()
-    }
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') app.quit()
 })
 
-app.on('activate', function() {
-    if (mainWindow === null) {
-        createWindow()
-    }
+app.on('activate', () => {
+    if (mainWindow === null) createWindow()
 })
