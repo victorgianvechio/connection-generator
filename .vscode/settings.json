@@ -7,6 +7,5 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "material-icon-theme",
-    "git.ignoreLimitWarning": true
+    "workbench.iconTheme": "material-icon-theme"
 }
