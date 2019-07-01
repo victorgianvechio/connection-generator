@@ -3,7 +3,7 @@
 */
 const oracledb = require('oracledb')
 
-const connect = async (user, pass, connString) => {
+const connect = async(user, pass, connString) => {
     let conn = ''
     let result = ''
 

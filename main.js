@@ -20,8 +20,8 @@ function createWindow() {
         icon: path.join(__dirname, '/app/assets/img/icon/icon.ico')
     })
 
-    //mainWindow.loadFile('index.html')
-    //mainWindow.webContents.openDevTools()
+    // mainWindow.loadFile('index.html')
+    // mainWindow.webContents.openDevTools()
 
     mainWindow.loadURL(
         url.format({
@@ -66,7 +66,7 @@ function showProgressbar(texto) {
     })
 
     progressBar.on('completed', () => {
-        //progressBar.detail = 'Task completed. Exiting...'
+        // progressBar.detail = 'Task completed. Exiting...'
         progressBar = null
     })
 }
