@@ -21,7 +21,7 @@
     "dependencies": {
         "electron-progressbar": "^1.2.0",
         "jquery": "^3.4.1",
-        "oracledb": "github:oracle/node-oracledb#dev-4.0"
+        "oracledb": "github:oracle/node-oracledb#v3.1.2"
     },
     "devDependencies": {
         "babel-eslint": "^10.0.1",
