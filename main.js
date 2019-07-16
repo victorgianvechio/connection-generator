@@ -8,7 +8,7 @@ let progressBar = ''
 
 function createWindow() {
     mainWindow = new BrowserWindow({
-        width: 480, // 480
+        width: 800, // 480
         height: 625, // 625
         show: false,
         webPreferences: {
@@ -21,7 +21,7 @@ function createWindow() {
     })
 
     // mainWindow.loadFile('index.html')
-    // mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
 
     mainWindow.loadURL(
         url.format({
