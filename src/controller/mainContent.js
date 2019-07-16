@@ -17,15 +17,7 @@ async function generateFile($, remote) {
     let algorithm = $('#cryptoAlgorithm').val()
 
     ipc.send('show-progressbar', 'Gerando Arquivo')
-    await generator.createFile(
-        user,
-        pass,
-        conn,
-        filePath,
-        fileName,
-        key,
-        algorithm
-    )
+    await generator.createFile(user, pass, conn, filePath, fileName, key, algorithm)
     await timeout(3000)
     await ipc.send('set-progressbar-completed')
 
@@ -71,16 +63,14 @@ async function configure(remote) {
     }
 
     if (!envExist) {
-        options.detail +=
-            '- Variável de ambiente criada.\n\nNecessário reiniciar a aplicação.'
+        options.detail += '- Variável de ambiente criada.\n\nNecessário reiniciar a aplicação.'
         await ipc.send('show-progressbar', 'Configurando variável de ambiente')
         await cfg.setEnv()
         await timeout(3000)
         await ipc.send('set-progressbar-completed')
     }
 
-    if (envExist && folderExist)
-        options.message = 'Parâmetros e configurações já realizadas.'
+    if (envExist && folderExist) options.message = 'Parâmetros e configurações já realizadas.'
 
     await timeout(500)
     await remote.dialog.showMessageBox(null, options)
@@ -129,9 +119,7 @@ function setCryptoAlgorithm() {
 
     algorithms.forEach(item => {
         if (item.indexOf('ecb') == -1 && item.indexOf('aes-256') != -1)
-            $('#cryptoAlgorithm').append(
-                `<option value="${item}">${item.toUpperCase()}</option>`
-            )
+            $('#cryptoAlgorithm').append(`<option value="${item}">${item.toUpperCase()}</option>`)
     })
 
     $('#cryptoAlgorithm option[value=aes-256-cbc]').attr('selected', 'selected')

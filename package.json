@@ -5,8 +5,8 @@
     "private": false,
     "main": "main.js",
     "scripts": {
-        "start": "set NODE_ENV=development&& electron .",
-        "build": "set NODE_ENV=production&& electron-packager . --out=./build/ --prune --overwrite --platform=win32 --arch=x64 --icon=./app/assets/img/icon/icon.ico --ignore=./gitignore --executableName=\"Gerador de Conexão\" --version-string.ProductName=\"connection-generator\"",
+        "start": "set \"NODE_ENV=development\" && electron .",
+        "build": "set \"NODE_ENV=production\" && electron-packager . --out=./build/ --prune --overwrite --platform=win32 --arch=x64 --icon=./app/assets/img/icon/icon.ico --ignore=./gitignore --executableName=\"Gerador de Conexão\" --version-string.ProductName=\"connection-generator\"",
         "lint": "./node_modules/.bin/eslint **/*.js",
         "lint-fix": "./node_modules/.bin/eslint **/*.js --fix",
         "rebuild": "./node_modules/.bin/electron-rebuild"
@@ -24,11 +24,11 @@
         "oracledb": "github:oracle/node-oracledb#dev-4.0"
     },
     "devDependencies": {
-        "babel-eslint": "^10.0.1",
+        "babel-eslint": "^10.0.2",
+        "eslint": "^6.0.1",
         "electron": "^5.0.1",
         "electron-packager": "^13.1.1",
-        "electron-rebuild": "^1.8.5",
-        "eslint": "^5.16.0"
+        "electron-rebuild": "^1.8.5"
     },
     "engineStrict": true,
     "engines": {
